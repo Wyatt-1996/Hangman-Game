@@ -1,0 +1,59 @@
+body {
+    height: 100vh;
+    background: black;
+}
+
+#jumbo {
+    height: 60%;
+    color: whitesmoke;
+}
+
+#wins {
+    color: black;
+    text-align: center;
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#headline {
+    font-family: fantasy;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+#start-text {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+#game-word {
+    text-align: center;
+    color: black;
+}
+
+.hint {
+    color: #999;
+    text-align: center;
+}
+
+#already-guessed {
+    color: black;
+    font-size: 24px;
+    text-align: center;
+}
+
+#letters-guessed {
+    color: black;
+    font-size: 24px;
+    text-align: center;
+}
+
+#guesses-left {
+    color: orangered;
+    font-size: 27px;
+    text-align: center;
+    margin-top: 21px;
+}
