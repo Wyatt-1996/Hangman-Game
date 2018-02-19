@@ -28,9 +28,13 @@ window.onload = function() {
 
     document.getElementById('game-word').innerHTML = (underscore.join(' '));
 
-    // listen for users keystroke
+    // track keyPresses
     var keyPressTimes = 0;
 
+    // declare userGuessArray
+    var userGuessArray = [];
+
+    // listen for users keystroke
     addEventListener('keyup', function(event) {    
 
         document.getElementById('start-text').innerHTML = '';
@@ -64,6 +68,7 @@ window.onload = function() {
         if (keyPressTimes > 10) {
             alert('Too Many Guesses. Try Again!');
             document.getElementById('guesses-left').innerHTML = 'Out of Guesses!';
+            window.location.reload(true);
         }
 
         if (keyPressTimes === 8) {
@@ -74,12 +79,21 @@ window.onload = function() {
             document.getElementById('guesses-left').innerHTML = '1 Guess Left!';
         }
 
-        // Win        
+        // Win
+        userGuessArray.push(userGuess);
 
-        // var 
-        // if (  === wordSplit) {
-        //     alert('You Win! Congratulations, Play Again')
-        // }
+        console.log(userGuessArray);
+
+        var userGuessString = userGuessArray.join('');
+
+        // console.log(userGuessString);
+        console.log(gameWord);
+
+        if (userGuessString === gameWord) {
+            alert('You Win!');
+            score++;
+            document.getElementById('wins').innerHTML = '1 Win';
+        }
         
 
     });
